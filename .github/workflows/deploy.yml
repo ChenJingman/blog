@@ -34,7 +34,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           # 使用自动生成的 GITHUB_TOKEN
-          github_token: ${{ GH_PAGES_TOKEN }}
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
           # 发布目录
           publish_dir: ./public
           # 目标仓库（替换为你的用户名）
