@@ -1,0 +1,12 @@
+# Hugo 生成文件
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# 临时文件
+.hugo_build.lock
+
+# IDE
+.vscode/
+.idea/
