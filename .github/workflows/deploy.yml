@@ -38,7 +38,7 @@ jobs:
           # 发布目录
           publish_dir: ./public
           # 目标仓库（替换为你的用户名）
-          external_repository: chenjingman/xxx.github.io
+          external_repository: ChenJingman/chenjingman.github.io
           # 目标分支
           publish_branch: main
           # 提交信息
