@@ -1,46 +1,49 @@
-baseurl: "https://example.org/"  # please update this to your actual URL
-locale: "en-us"
-title: "A minimal Hugo website"
+baseurl: "https://chenjingman.github.io/"  # please update this to your actual URL
+locale: "zh-cn"
+languageCode: "zh-cn"
+title: "静塔"
 theme: "hugo-xmin"
-googleAnalytics: ""
-disqusShortname: ""
-ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+#googleAnalytics: ""
+#disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"] #构建时忽略这些文件：R 语言的源文件和缓存目录
 footnotereturnlinkcontents: "↩"
 
 permalinks:
-  note: "/note/:year/:month/:day/:slug/"
   post: "/post/:year/:month/:day/:slug/"
 
 menu:
   main:
-    - name: Home
-      url: ""
-      weight: 1
-    - name: About
+#    - name: 门面
+#      url: ""
+#     weight: 1
+    - name: 探索的入口
       url: "about/"
+      weight: 1
+    - name: 仓库
+      url: "post/"
       weight: 2
-    - name: Categories
-      url: "categories/"
-      weight: 3
-    - name: Tags
-      url: "tags/"
-      weight: 4
-    - name: Subscribe
+#    - name: 大类
+#      url: "categories/"
+#      weight: 3
+#    - name: 索引
+#      url: "tags/"
+#      weight: 4
+    - name: 邮递特快
       url: "index.xml"
 
 params:
-  description: "A website built through Hugo and blogdown."
-  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- {Year} | [Github](https://github.com/yihui) | [BlueSky](https://bsky.app/profile/yihui.org)"
+  description: "最爱湖东行不足，绿杨阴里白沙堤"
+  footer: "&copy; 陈静满 2026 -- {Year}"
 
 security:
-  allowContent: ['.*']
+  allowContent: ['.*'] #允许渲染任何来源的内容
 
 markup:
   highlight:
-    codeFences: false
+    codeFences: false #不用 Hugo 内置代码高亮，留给 highlight.js
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: true #允许 Markdown 里直接写 HTML
     extensions:
       passthrough:
         enable: true
@@ -52,4 +55,4 @@ markup:
             - $$
           inline:
           - - \(
-            - \)
+            - \) #保留 $$...$$ 和 \(...\) 给 KaTeX/MathJax 渲染
