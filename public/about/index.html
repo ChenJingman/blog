@@ -7,6 +7,56 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/styles/github.min.css">
+
+
+<style>
+     
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local('JetBrains Mono Regular'),
+           local('JetBrainsMono-Regular'),
+           url('https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2');
+    }
+  
+     
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local('JetBrains Mono Bold'),
+           local('JetBrainsMono-Bold'),
+           url('https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/fonts/webfonts/JetBrainsMono-Bold.woff2') format('woff2');
+    }
+  
+     
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: local('JetBrains Mono Italic'),
+           local('JetBrainsMono-Italic'),
+           url('https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/fonts/webfonts/JetBrainsMono-Italic.woff2') format('woff2');
+    }
+  </style>
+
+
+<style>
+    code, pre, .hljs {
+      font-family: "JetBrains Mono", monospace !important;
+    }
+  </style>
+
+
+<link rel="stylesheet" href="/css/custom.css">
   </head>
 
   <body>
@@ -25,11 +75,25 @@
     <hr/>
     </nav>
 
+
 <div class="article-meta">
 <h1><span class="title">通往静塔的穿梭，自由地探索</span></h1>
 <h2 class="author">陈静满</h2>
 
+
+
+<p class="terms">
+
+  
+
+  
+
+</p>
+
+
 </div>
+
+
 
 <main>
 <p>这里的主人是陈静满。</p>
@@ -37,19 +101,51 @@
 </main>
 
   <footer>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+  
 <script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+<script src="//cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/auto-render.min.js,npm/@xiee/utils/js/render-katex.js" defer></script>
+
 
 <script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/rust.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/xml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/javascript.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/latex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/c.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/cpp.min.js"></script>
+
+
+<script id="typst-hljs" src="https://cdn.jsdelivr.net/npm/@myriaddreamin/highlighter-typst@0.7.0-rc2/dist/cjs/contrib/hljs/typst.bundle.js"></script>
+<script>
+  
+  const runTypst = $typst$parserModule.then(() => {
+    hljs.registerLanguage(
+      'typst',
+      window.hljsTypst({
+        codeBlockDefaultLanguage: 'typst',
+      })
+    );
+    
+    hljs.highlightAll();
+  });
+</script>
+
+
+<script>
+  hljs.highlightAll();
+</script>
+
   
   <hr/>
-  © 陈静满 2026 &ndash; 2026
+  © 陈静满 2026 -- 2026
   
   </footer>
   </body>
 </html>
-

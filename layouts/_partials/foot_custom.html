@@ -1,7 +1,40 @@
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<!-- ===== KaTeX 数学公式 ===== -->
 <script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+<script src="//cdn.jsdelivr.net/combine/npm/katex/dist/katex.min.js,npm/katex/dist/contrib/auto-render.min.js,npm/@xiee/utils/js/render-katex.js" defer></script>
 
+<!-- ===== 图片居中 ===== -->
 <script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+<!-- ===== highlight.js 核心库 ===== -->
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+
+<!-- ===== 按需引入语言包 ===== -->
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/rust.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/xml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/javascript.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/latex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/c.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/languages/cpp.min.js"></script>
+
+<!-- ===== Typst 专业语言包 (使用 WASM 解析) ===== -->
+<script id="typst-hljs" src="https://cdn.jsdelivr.net/npm/@myriaddreamin/highlighter-typst@0.7.0-rc2/dist/cjs/contrib/hljs/typst.bundle.js"></script>
+<script>
+  // 等待 WASM 解析器模块加载完成后，注册 Typst 语言
+  const runTypst = $typst$parserModule.then(() => {
+    hljs.registerLanguage(
+      'typst',
+      window.hljsTypst({
+        codeBlockDefaultLanguage: 'typst',
+      })
+    );
+    // 注册完成后，重新高亮所有代码块
+    hljs.highlightAll();
+  });
+</script>
+
+<!-- ===== 初始化 highlight.js ===== -->
+<script>
+  hljs.highlightAll();
+</script>

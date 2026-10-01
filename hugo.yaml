@@ -1,33 +1,22 @@
-baseurl: "https://chenjingman.github.io/"  # please update this to your actual URL
-locale: "zh-cn"
+baseurl: "https://chenjingman.github.io/"
 languageCode: "zh-cn"
 title: "静塔"
 theme: "hugo-xmin"
 #googleAnalytics: ""
 #disqusShortname: ""
-ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"] #构建时忽略这些文件：R 语言的源文件和缓存目录
 footnotereturnlinkcontents: "↩"
 
 permalinks:
-  post: "/post/:year/:month/:day/:slug/"
+  post: "/post/:year/:month/:day/:filename/"
 
 menu:
   main:
-#    - name: 门面
-#      url: ""
-#     weight: 1
     - name: 探索的入口
       url: "about/"
       weight: 1
     - name: 仓库
       url: "post/"
       weight: 2
-#    - name: 大类
-#      url: "categories/"
-#      weight: 3
-#    - name: 索引
-#      url: "tags/"
-#      weight: 4
     - name: 邮递特快
       url: "index.xml"
 
@@ -35,8 +24,11 @@ params:
   description: "最爱湖东行不足，绿杨阴里白沙堤"
   footer: "&copy; 陈静满 2026 -- {Year}"
 
-security:
-  allowContent: ['.*'] #允许渲染任何来源的内容
+taxonomies:
+  category: categories
+  tag: tags
+  genre: genres
+  author: authors
 
 markup:
   highlight:
@@ -45,7 +37,7 @@ markup:
     renderer:
       unsafe: true #允许 Markdown 里直接写 HTML
     extensions:
-      passthrough:
+      passthrough: #KaTeX
         enable: true
         delimiters:
           block:
@@ -55,4 +47,8 @@ markup:
             - $$
           inline:
           - - \(
-            - \) #保留 $$...$$ 和 \(...\) 给 KaTeX/MathJax 渲染
+            - \)
+      cjk:
+        eastAsianLineBreaks: true
+        eastAsianLineBreaksStyle: simple
+      typographer: false
